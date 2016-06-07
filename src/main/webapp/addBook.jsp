@@ -17,7 +17,7 @@
                 <stripes:text name="title"/><br>                
                 
                 Year of publishing:
-                <stripes:text name="published"/><br>
+                <stripes:text name="yearPublished"/><br>
                 
                 Remark
                 <stripes:text name="remark"/><br>                
