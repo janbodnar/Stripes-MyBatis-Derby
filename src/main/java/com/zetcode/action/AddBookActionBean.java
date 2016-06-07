@@ -13,18 +13,18 @@ public class AddBookActionBean implements ActionBean {
 
     private static final String VIEW = "/bookAdded.jsp";
     private ActionBeanContext context;
-    
-    @Validate(required=true)
+
+    @Validate(required = true)
     private String author;
-    
-    @Validate(required=true)
+
+    @Validate(required = true)
     private String title;
-    
-    @Validate(required=true)
+
+    @Validate(required = true)
     private int yearPublished;
-    
-    @Validate(required=true)
-    private String remark;    
+
+    @Validate(required = true)
+    private String remark;
 
     public String getAuthor() {
         return author;
@@ -42,12 +42,12 @@ public class AddBookActionBean implements ActionBean {
         this.title = title;
     }
 
-    public int getPublished() {
+    public int getYearPublished() {
         return yearPublished;
     }
 
-    public void setPublished(int published) {
-        this.yearPublished = published;
+    public void setYearPublished(int yearPublished) {
+        this.yearPublished = yearPublished;
     }
 
     public String getRemark() {
@@ -57,11 +57,11 @@ public class AddBookActionBean implements ActionBean {
     public void setRemark(String remark) {
         this.remark = remark;
     }
-  
+
     @DefaultHandler
     public Resolution addBook() {
-        
-        Book book = new Book(this.author, this.title, 
+
+        Book book = new Book(this.author, this.title,
                 this.yearPublished, this.remark);
         BookService.saveBook(book);
 
@@ -76,7 +76,7 @@ public class AddBookActionBean implements ActionBean {
 
     @Override
     public ActionBeanContext getContext() {
-        
+
         return context;
     }
 }
