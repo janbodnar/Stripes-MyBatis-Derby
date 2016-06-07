@@ -1,7 +1,7 @@
 package com.zetcode.action;
 
 import com.zetcode.bean.Book;
-import com.zetcode.services.BookService;
+import com.zetcode.service.BookService;
 import java.util.List;
 import net.sourceforge.stripes.action.ActionBean;
 import net.sourceforge.stripes.action.ActionBeanContext;
